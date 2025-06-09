@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el Maná - Tradición de hogar</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="el Maná">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/catalogo.html" class="active">Catalógo</a></li>
+                    <li><a href="#">Nuestras Sedes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="cart-icon">
+                    <img src="Iconos/png/Icono-01.png" alt="">
+                </a>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div id="carrito" class="carrito-container" style="display:none;">
+            <h3>Carrito de compras</h3>
+            <ul id="carrito-items"></ul>
+            <p><strong>Total:</strong> $<span id="carrito-total">0</span></p>
+            <button id="vaciar-carrito">Vaciar carrito</button>
+            <button id="comprar-carrito"
+                style="background: #d4af37; color: #fff; border: none; border-radius: 4px; padding: 8px 16px; margin-top: 10px; cursor: pointer;">Comprar</button>
+        </div>
+    </header>
+
+    <section id="productos" class="products">
+
+
+        <div class="icon-row">
+
+            <div class="icon-circle large" data-section="panaderia-section">
+                <img src="Iconos/Svg/Icono-05.svg" alt="Panadería">
+            </div>
+            <div class="icon-circle large" data-section="restaurante-section">
+                <img src="Iconos/Svg/Icono-04.svg" alt="Restaurante">
+            </div>
+            <div class="icon-circle large" data-section="cafeteria-section">
+                <img src="Iconos/Svg/Icono-06.svg" alt="Cafetería">
+            </div>
+            <div class="icon-circle large" data-section="bizcocheria-section">
+                <img src="Iconos/Svg/Icono-10.svg" alt="Cafetería">
+            </div>
+            <div class="icon-circle large" data-section="santandereano-section">
+                <img src="Iconos/Svg/Icono-09.svg" alt="Cafetería">
+            </div>
+        </div>
+
+        <div class="panaderia-section">
+            <h2>Panadería</h2>
+            <div class="section-divider"></div>
+            <div class="product-grid">
+                <div class="product-card catalog-card" data-category="tradicional" data-tipo="panaderia">
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Tradicional</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes clásicos
+                        de la casa, perfectos para cualquier ocasión.</p>
+                </div>
+                <div class="product-card catalog-card" data-category="dulce" data-tipo="panaderia">
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Dulce</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                        Variedad de panes y pasteles dulces para disfrutar.
+                    </p>
+                </div>
+                <div class="product-card catalog-card" data-category="rellenos" data-tipo="panaderia">  
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Rellenos</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes con
+                        deliciosos rellenos, ideales para sorprender.</p>
+                </div>
+                <div class="product-card catalog-card" data-category="integral" data-tipo="panaderia">
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Integral</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Opciones
+                        saludables y nutritivas, hechas con harinas integrales.</p>
+                </div>
+                <div class="product-card catalog-card" data-category="funcional" data-tipo="panaderia">
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Funcional</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes
+                        especiales con ingredientes funcionales para tu bienestar.</p>
+                </div>
+                <div class="product-card catalog-card" data-category="temporada" data-tipo="panaderia" style="display: none;">
+                    <div class="product-image">
+                        <img src="images/cascarita.jpg" alt="Tradicional">
+                    </div>
+                    <h3>Temporada (Noviembre)</h3>
+                    <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Productos
+                        exclusivos de temporada, disponibles en noviembre.</p>
+                </div>
+            </div>
+            <script>
+
+            </script>
+        </div>
+
+        <div class="bizcocheria-section" style="display: none;">
+            <h2>Bizcochería</h2>
+            <div class="section-divider"></div>
+            <div class="product-grid">
+            <div class="product-card catalog-card" data-category="torta_artesanal" data-tipo="bizcocheria">
+            <div class="product-image">
+            <img src="images/bizcocho-polvorosa.jpg" alt="Torta artesanal">
+            </div>
+            <h3>Torta artesanal</h3>
+            <p>Bizcocho tradicional, crujiente y delicioso.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="dulces" data-tipo="bizcocheria">
+            <div class="product-image">
+            <img src="images/bizcocho-roscon.jpg" alt="Dulces">
+            </div>
+            <h3>Dulces</h3>
+            <p>Bizcocho relleno de bocadillo o arequipe.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="salados" data-tipo="bizcocheria">
+            <div class="product-image">
+            <img src="images/bizcocho-galleta.jpg" alt="Salados">
+            </div>
+            <h3>Salados</h3>
+            <p>Galletas artesanales de mantequilla.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="cafeteria-section" style="display: none;">
+            <h2>Cafetería</h2>
+            <div class="section-divider"></div>
+            <div class="product-grid">
+            <div class="product-card catalog-card" data-category="onces" data-tipo="cafeteria">
+            <div class="product-image">
+            <img src="images/cafe-tinto.jpg" alt="Onces">
+            </div>
+            <h3>Onces</h3>
+            <p>Café colombiano recién preparado.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="bebidas" data-tipo="cafeteria">
+            <div class="product-image">
+            <img src="images/cafe-capuchino.jpg" alt="Bebidas">
+            </div>
+            <h3>Bebidas</h3>
+            <p>Espuma de leche y café, una combinación perfecta.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="santandereano-section" style="display: none;">
+            <h2>Rincón Santandereano</h2>
+            <div class="section-divider"></div>
+            <div class="product-grid">
+            <div class="product-card catalog-card" data-category="tamal" data-tipo="santandereano">
+            <div class="product-image">
+            <img src="images/hormiga-culona.jpg" alt="Tamal">
+            </div>
+            <h3>Tamal</h3>
+            <p>Delicadeza típica de Santander.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="carnes_frias" data-tipo="santandereano">
+            <div class="product-image">
+            <img src="images/arepa-santandereana.jpg" alt="Carnes frías">
+            </div>
+            <h3>Carnes frías</h3>
+            <p>Arepa crocante y sabrosa, receta tradicional.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="ayacos" data-tipo="santandereano">
+            <div class="product-image">
+            <img src="images/pepitoria.jpg" alt="Ayacos">
+            </div>
+            <h3>Ayacos</h3>
+            <p>Plato típico santandereano, lleno de sabor.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="restaurante-section" style="display: none;">
+            <h2>Restaurante</h2>
+            <div class="section-divider"></div>
+            <div class="product-grid">
+            <div class="product-card catalog-card" data-category="combos" data-tipo="restaurante">
+            <div class="product-image">
+            <img src="images/bandeja-paisa.jpg" alt="Combos">
+            </div>
+            <h3>Combos</h3>
+            <p>Plato tradicional colombiano con variedad de ingredientes.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="menu-del-dia" data-tipo="restaurante">
+            <div class="product-image">
+            <img src="images/ajiaco.jpg" alt="Menú del día">
+            </div>
+            <h3>Menú del día</h3>
+            <p>Sopa típica de Bogotá, con pollo y papa.</p>
+            </div>
+            <div class="product-card catalog-card" data-category="ensaladas" data-tipo="restaurante">
+            <div class="product-image">
+            <img src="images/sancocho.jpg" alt="Ensaladas">
+            </div>
+            <h3>Ensaladas</h3>
+            <p>Caldo tradicional con carnes y verduras.</p>
+            </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="catalogo" class="catalogo" style="display: none;">
+        <div class="container" id="encabezado">
+            <h1 id="TipoProducto"> Panaderia</h1>
+            <div class="icon-circle large" data-section="panaderia-section">
+                <img src="Iconos/Svg/Icono-05.svg" alt="Panadería">
+            </div>
+            <div class="icon-circle large" data-section="restaurante-section">
+                <img src="Iconos/Svg/Icono-04.svg" alt="Restaurante">
+            </div>
+            <div class="icon-circle large" data-section="cafeteria-section">
+                <img src="Iconos/Svg/Icono-06.svg" alt="Cafetería">
+            </div>
+            <div class="icon-circle large" data-section="bizcocheria-section">
+                <img src="Iconos/Svg/Icono-10.svg" alt="Cafetería">
+            </div>
+            <div class="icon-circle large" data-section="santandereano-section">
+                <img src="Iconos/Svg/Icono-09.svg" alt="Cafetería">
+            </div>
+        </div>
+        <div class="catalogo-layout">
+
+
+            <aside class="sidebar sidebar-filtros">
+                <!-- Línea vertical decorativa al lado izquierdo, 10% más larga -->
+                 <div
+                    style=" display: flex; height: 50%; width: 2px; background: #d4af37; border-radius: 2px; z-index: 1;">
+                </div>
+                <div>
+                   
+                    <h3>Sede</h3>
+                    <select name="sede" id="sede-select">
+                        <option value="" disabled selected>Seleccione una sede</option>
+                        <option value="centro">Centro</option>
+                        <option value="antoniaSantos">Antonia Santos</option>
+                        <option value="paseoDelComercio">Paseo del Comercio</option>
+                        <option value="cabecera">Cabecera</option>
+                        <option value="mejorasPublicas">Mejoras Públicas</option>
+                        <option value="cañaveral">Cañaveral</option>
+                        <option value="cie">CIE</option>
+                    </select>
+                    <h3>Categoria</h3>
+                    <select name="clase-producto" id="clase-producto">
+                        <option value="">Selecciona una clase</option>
+                        <option value="todo">Todo</option>
+                        <option value="tradicional">Tradicional</option>
+                        <option value="dulce">Dulce</option>
+                        <option value="rellenos">Rellenos</option>
+                        <option value="integral">Integral</option>
+                        <option value="funcional">Funcional</option>
+                        <option value="temporada">Temporada</option>
+                    </select>
+                </div>
+                <div class="foto-sede" style="text-align:center; margin-bottom:15px;">
+                    <img id="foto-sede-img" src="images/sedes/centro.jpg" alt="Foto de la sede"
+                        style="max-width:100%; border-radius:8px;">
+                </div>
+                <script>
+                    document.getElementById('sede-select').addEventListener('change', function () {
+                        const sede = this.value;
+                        const img = document.getElementById('foto-sede-img');
+                        let src = 'images/sedes/default.jpg';
+                        if (sede === 'centro') src = 'images/sedes/centro.jpg';
+                        else if (sede === 'antoniaSantos') src = 'images/sedes/antoniaSantos.jpg';
+                        else if (sede === 'paseoDelComercio') src = 'images/sedes/paseoDelComercio.jpg';
+                        else if (sede === 'cabecera') src = 'images/sedes/cabecera.jpg';
+                        else if (sede === 'mejorasPublicas') src = 'images/sedes/mejorasPublicas.jpg';
+                        else if (sede === 'cañaveral') src = 'images/sedes/cañaveral.jpg';
+                        else if (sede === 'cie') src = 'images/sedes/cie.jpg';
+                        img.src = src;
+                    });
+                </script>
+            </aside>
+            <!-- Lateral derecho: Productos -->
+            <main class="sidebar sidebar-productos">
+                <div class="productos-lista" id="productos-lista">
+                    <div class="product-card" data-category="tradicional" data-tipo="panaderia">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Tradicional">
+                        </div>
+                        <h3>Tradicional</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Panes clásicos de la casa</option>
+                                <option>Pan francés</option>
+                                <option>Pan campesino</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="Dulce">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Dulce">
+                        </div>
+                        <h3>Dulce</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Variedad de panes y pasteles dulces</option>
+                                <option>Pan de chocolate</option>
+                                <option>Pastel de guayaba</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="rellenos">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Rellenos">
+                        </div>
+                        <h3>Rellenos</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Panes con deliciosos rellenos</option>
+                                <option>Pan de queso</option>
+                                <option>Pan de bocadillo</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="integral">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Integral">
+                        </div>
+                        <h3>Integral</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Opciones saludables y nutritivas</option>
+                                <option>Pan integral</option>
+                                <option>Pan de avena</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="funcional">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Funcional">
+                        </div>
+                        <h3>Funcional</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Panes especiales con ingredientes funcionales</option>
+                                <option>Pan sin gluten</option>
+                                <option>Pan con semillas</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="temporada" style="display: none;">
+                        <div class="product-image">
+                            <img src="images/cascarita.jpg" alt="Temporada">
+                        </div>
+                        <h3>Temporada (Noviembre)</h3>
+                        <div class="opciones-producto">
+                            <select style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                <option>Productos exclusivos de temporada</option>
+                                <option>Pan de Navidad</option>
+                                <option>Rosca de Reyes</option>
+                            </select>
+                            <button
+                                style="background: #d4af37; border: none; border-radius: 50%; width: 28px; height: 28px; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+    <section id="panaderia" class="panaderia" style="display: none;">
+        <div class="container">
+            <div class="icon-circle large" data-section="panaderia-section">
+                <h1 id="TipoProducto"></h1>
+                <div class="icon-circle large" data-section="panaderia-section">
+                    <img src="icons/panaderia.png" alt="Panadería">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logoOscuro.png" alt="el Maná">
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <p>Cra. 18 #37-42, Bucaramanga - Colombia</p>
+                <p>Teléfono: 6076425198</p>
+                <p>Email: contacto@elmana.co</p>
+            </div>
+
+            <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                    dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+                    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+                    delenit augue duis dolore te feugiat nulla facilisi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                    ullamcorper suscipit</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+<div class="sedes-carousel">
+                    <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track" style="height:50vh;align-items:center;width:100vw;max-width:100vw;">
+                        <div class="sede-card" style="height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede1.jpg" alt="Centro" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Centro</h3>
+                                <p>CR 16 # 37 - 42 CENTRO</p>
+                                <p>Tel: 6076425198</p>
+                                <p>Cel: 3173487430</p>
+                            </div>
+                        </div>
+                        <div class="sede-card" style="height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede2.jpg" alt="Antonia Santos" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Antonia Santos</h3>
+                                <p>CR 21 # 32 - 46 ANTONIA SANTOS</p>
+                                <p>Cel: 3176192258</p>
+                            </div>
+                        </div>
+                        <div class="sede-card" style="height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede3.jpg" alt="Paseo del Comercio" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Paseo del Comercio</h3>
+                                <p>CL 35 # 13 -17 CENTRO</p>
+                                <p>Cel: 3155125588</p>
+                            </div>
+                        </div>
+                        <!-- Las demás sedes quedan en el DOM pero ocultas por el carrusel -->
+                        <div class="sede-card" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede4.jpg" alt="Cabecera" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Cabecera</h3>
+                                <p>CR 35 A # 52 - 32</p>
+                                <p>Cel: 3158070804</p>
+                            </div>
+                        </div>
+                        <div class="sede-card" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede5.jpg" alt="Mejoras Públicas" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Mejoras Públicas</h3>
+                                <p>CR 28 # 35 - 90</p>
+                                <p>Tel: 6076822282</p>
+                                <p>Cel: 3153962533</p>
+                            </div>
+                        </div>
+                        <div class="sede-card" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede6.jpg" alt="Cañaveral" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Cañaveral</h3>
+                                <p>CL 31 # 24 - 41 FLORIDABLANCA</p>
+                                <p>Cel: 3043161907</p>
+                            </div>
+                        </div>
+                        <div class="sede-card" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                            <div class="sede-image">
+                                <img src="images/sedes/sede7.jpg" alt="Cafe y Pan CIE" class="sede-img">
+                            </div>
+                            <div class="sede-info">
+                                <h3>Cafe y Pan CIE</h3>
+                                <p>CIE LOCAL 219</p>
+                                <p>Cel: 3165000009</p>
+                            </div>
+                        </div>
+                    </div>
+                   

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+
+    <title>Nuestras Sedes - El Maná</title>
+    <style>
+
+.sedes-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+        margin-bottom: 3vh;
+
+}
+
+.section-title h2 {
+    font-size: 5rem;
+    color: #333;
+    font-weight: 300;
+    font-family: 'Caneletter';
+
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #f4c430, #e6b800);
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-wrapper {
+    display: flex;
+        height: 60vh;
+
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+.sede-card {
+   
+    display: flex;
+    
+    flex-direction: row;  /* Cambiado para mostrar imagen y descripción en fila */
+    padding: 0 15px;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: space-between; /* Ajusta el espacio entre imagen y descripción */
+        transition: all 0.5s ease-in-out;
+
+}
+
+.sede-card.side {
+     min-width: 25%;
+   opacity: 0.5;
+    transform: scale(0.85);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sede-card.center {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid #f4c430;
+    padding-left: 3vw;
+        padding-right: 3vw;
+
+    box-shadow: 0 8px 32px rgba(244, 196, 48, 0.18), 0 2px 8px rgba(0,0,0,0.08);
+     min-width: 50%;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;    z-index: 2;
+}
+
+.sede-image {
+    width: 100%; /* Imagen ocupará la mitad del espacio */
+    max-width: 400px;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+
+.sede-image img {
+    width: 100%;
+    height: 100%;  /* Ajustar para que ocupe toda la altura */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.sede-card.center .sede-image img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.sede-image:hover img {
+    transform: scale(1.05); /* Suaviza el aumento de tamaño */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Suaviza la sombra */
+}
+
+
+.sede-info {
+    padding-top: 1vh;
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left; /* Alineación a la izquierda */
+    max-width: 500px; /* Máxima anchura para el contenido */
+    width: 100%;
+ opacity: 0;
+    transform: translateY(20px); /* Hace que la información suba desde abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: -10px;
+}
+
+.sede-card.center .sede-info {
+    display: block;
+    opacity: 1;
+      opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sede-info h3 {
+    font-size: 3rem;
+    color: #f4c430;
+    font-family: 'Caneletter';
+    padding: 0;
+}
+
+.sede-info .address {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.sede-info .description {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sede-info .contact {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: left;
+}
+
+.sede-info .contact strong {
+    color: #333;
+}
+
+.sede-title-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sede-card.side .sede-image {
+    position: relative;
+}
+
+.sede-card.side .sede-image:hover .sede-title-overlay {
+    opacity: 1;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.nav-button:hover {
+    background: #f4c430;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.prev {
+    left: 20px;
+}
+
+.nav-button.next {
+    right: 20px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #f4c430;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(244, 196, 48, 0.5);
+}
+
+.indicator:hover {
+    background: #e6b800;
+}
+
+@media (max-width: 1024px) {
+    .sede-card {
+        min-width: 50%;
+    }
+    
+    .sede-card.side {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sede-card {
+        min-width: 100%;
+        flex-direction: column;  /* Cambiar la dirección a columna para móviles */
+    }
+
+    .sede-info {
+        padding: 20px;
+    }
+
+    .sede-image {
+        width: 100%;  /* Imagen ocupa toda la anchura */
+        max-height: 250px;  /* Limitar el alto */
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .sede-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .nav-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .nav-button.prev {
+        left: 10px;
+    }
+
+    .nav-button.next {
+        right: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="sedes-section">
+        <div class="section-title">
+            <h2>Nuestras Sedes</h2>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+          
+                   <!-- Sede 7 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede7.jpg" alt="Cafe y Pan CIE" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cafe y Pan CIE</h3>
+                        <p>CIE LOCAL 219</p>
+                        <p>Cel: 3165000009</p>
+                        <div class="description">
+                            Un espacio único en el CIE, especializado en café y panadería artesanal para disfrutar en cualquier momento.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 1 -->
+                <div class="sede-card center" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede1.jpg" alt="Centro" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Centro</h3>
+                        <p>CR 16 # 37 - 42 CENTRO</p>
+                        <p>Tel: 6076425198</p>
+                        <p>Cel: 3173487430</p>
+                        <div class="description">
+                            Nuestra sede principal en el centro de Bucaramanga, con atención cálida y variedad de productos frescos todos los días.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 2 -->
+                <div class="sede-card slide" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede2.jpg" alt="Antonia Santos" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Antonia Santos</h3>
+                        <p>CR 21 # 32 - 46 ANTONIA SANTOS</p>
+                        <p>Cel: 3176192258</p>
+                        <div class="description">
+                            Ubicada en el tradicional barrio Antonia Santos, ideal para disfrutar en familia y con amigos en un ambiente acogedor.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 3 -->
+                <div class="sede-card side" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede3.jpg" alt="Paseo del Comercio" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Paseo del Comercio</h3>
+                        <p>CL 35 # 13 -17 CENTRO</p>
+                        <p>Cel: 3155125588</p>
+                        <div class="description">
+                            En el corazón comercial de la ciudad, perfecta para una pausa deliciosa durante tus compras o actividades diarias.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 4 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede4.jpg" alt="Cabecera" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cabecera</h3>
+                        <p>CR 35 A # 52 - 32</p>
+                        <p>Cel: 3158070804</p>
+                        <div class="description">
+                            Sede ubicada en Cabecera, con ambiente moderno y excelente atención para compartir momentos especiales.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 5 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede5.jpg" alt="Mejoras Públicas" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Mejoras Públicas</h3>
+                        <p>CR 28 # 35 - 90</p>
+                        <p>Tel: 6076822282</p>
+                        <p>Cel: 3153962533</p>
+                        <div class="description">
+                            Ideal para llevar a casa el pan más delicioso y fresco, perfecto para compartir en familia o sorprender a tus seres queridos con un sabor inolvidable.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 6 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede6.jpg" alt="Cañaveral" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cañaveral</h3>
+                        <p>CL 31 # 24 - 41 FLORIDABLANCA</p>
+                        <p>Cel: 3043161907</p>
+                        <div class="description">
+                            En Floridablanca, nuestra sede Cañaveral ofrece productos frescos y atención personalizada en una zona estratégica.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 7 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede7.jpg" alt="Cafe y Pan CIE" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cafe y Pan CIE</h3>
+                        <p>CIE LOCAL 219</p>
+                        <p>Cel: 3165000009</p>
+                        <div class="description">
+                            Un espacio único en el CIE, especializado en café y panadería para disfrutar en cualquier momento.
+                        </div>
+                    </div>
+                </div>
+           <!-- Sede 1 -->
+                <div class="sede-card center" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede1.jpg" alt="Centro" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Centro</h3>
+                        <p>CR 16 # 37 - 42 CENTRO</p>
+                        <p>Tel: 6076425198</p>
+                        <p>Cel: 3173487430</p>
+                        <div class="description">
+                            Nuestra sede principal en el centro de Bucaramanga, con atención cálida y variedad de productos frescos todos los días.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button prev" id="prevBtn">‹</button>
+            <button class="nav-button next" id="nextBtn">›</button>
+        </div>
+
+        <div class="indicators" id="indicators">
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+            <span class="indicator" data-slide="5"></span>
+            <span class="indicator" data-slide="6"></span>
+             <span class="indicator" data-slide="7"></span>
+            <span class="indicator" data-slide="8"></span>
+        </div>
+    </section>
+<script>
+const wrapper = document.getElementById('carouselWrapper');
+const cards = Array.from(wrapper.children);
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const indicators = document.querySelectorAll('.indicator');
+
+let currentIndex = 1; // Empieza en el slide "Centro" (índice 1)
+const totalSlides = 9; // Total de slides reales (sin contar el "CIE" y el "Centro" de inicio y final)
+let autoSlideInterval = null;
+
+// Función para actualizar la visualización del carrusel
+function updateCarousel() {
+    cards.forEach((card, i) => {
+        card.classList.remove('center', 'side');
+        card.style.display = 'none';
+    });
+
+    const realIndex = currentIndex % totalSlides;
+    cards[realIndex].classList.add('center');
+    cards[realIndex].style.display = 'flex';
+
+    const prevIndex = (realIndex - 1 + totalSlides) % totalSlides;
+    const nextIndex = (realIndex + 1) % totalSlides;
+
+    cards[prevIndex].classList.add('side');
+    cards[prevIndex].style.display = 'flex';
+
+    cards[nextIndex].classList.add('side');
+    cards[nextIndex].style.display = 'flex';
+
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentIndex);
+    });
+}
+
+// Evento para el botón "prev"
+prevBtn.addEventListener('click', () => {
+    if (currentIndex == 1) {
+        currentIndex = 7;
+    } else {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    }
+    updateCarousel();
+    resetAutoSlide();
+});
+
+// Evento para el botón "next"
+nextBtn.addEventListener('click', () => {
+    if (currentIndex == 7) {
+        currentIndex = 1;
+    } else {
+        currentIndex = (currentIndex + 1) % totalSlides;
+    }
+    updateCarousel();
+    resetAutoSlide();
+});
+
+// Evento para los indicadores
+indicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+        resetAutoSlide();
+    });
+});
+
+// Auto-slide
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        if (currentIndex == 7) {
+            currentIndex = 1;
+        } else {
+            currentIndex = (currentIndex + 1) % totalSlides;
+        }
+        updateCarousel();
+    }, 4000); // Cambia cada 4 segundos
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Inicializa el carrusel y auto-slide
+updateCarousel();
+startAutoSlide();
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

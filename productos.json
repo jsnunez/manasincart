@@ -1,0 +1,459 @@
+{
+    "panaderia": {
+        "centro": {
+            "tradicional": [
+                {
+                    "nombre": "Pan francés",
+                    "imagen": "images/cascarita.jpg",
+                    "descripcion": "Clásico pan crocante de corteza dorada y miga suave.",
+                    "variantes": {
+                        "pequeño": 1200,
+                        "mediano": 1800,
+                        "grande": 2500
+                    }
+                },
+                {
+                    "nombre": "Pan campesino",
+                    "imagen": "images/conchita.jpg",
+                    "descripcion": "Pan rústico de harina integral, ideal para desayunos.",
+                    "variantes": {
+                        "pequeño": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de avena",
+                    "imagen": "images/frances.jpg",
+                    "descripcion": "Pan suave con avena, perfecto para una dieta saludable.",
+                    "variantes": {
+                        "pequeño": 2200
+                    }
+                },
+                {
+                    "nombre": "Pan de maíz",
+                    "imagen": "images/hamburguesa.jpg",
+                    "descripcion": "Pan tradicional elaborado con harina de maíz.",
+                    "variantes": {
+                        "pequeño": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de centeno",
+                    "imagen": "images/rollo.jpg",
+                    "descripcion": "Pan oscuro y denso, rico en fibra y sabor.",
+                    "variantes": {
+                        "pequeño": 2500
+                    }
+                }
+            ],
+            "dulce": [
+                {
+                    "nombre": "Pan de chocolate",
+                    "imagen": "images/cascarita.jpg",
+                    "descripcion": "Pan de chocolate con caramelo de chocolate",
+                    "variantes": {
+                        "pequeño": 1200,
+                        "mediano": 1800,
+                        "grande": 2500
+                    }
+                },
+                {
+                    "nombre": "Pan de coco",
+                    "imagen": "images/pan_coco.jpg",
+                    "descripcion": "Pan dulce relleno de coco rallado y azúcar.",
+                    "variantes": {
+                        "pequeño": 1800
+                    }
+                },
+                {
+                    "nombre": "Pan de guayaba",
+                    "imagen": "images/pan_guayaba.jpg",
+                    "descripcion": "Pan suave relleno de dulce de guayaba.",
+                    "variantes": {
+                        "pequeño": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de arequipe",
+                    "imagen": "images/pan_arequipe.jpg",
+                    "descripcion": "Pan dulce relleno de cremoso arequipe.",
+                    "variantes": {
+                        "pequeño": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de uvas pasas",
+                    "imagen": "images/pan_uvas.jpg",
+                    "descripcion": "Pan dulce con uvas pasas y un toque de canela.",
+                    "variantes": {
+                        "unidad": 1800
+                    }
+                }
+            ],
+            "rellenos": [],
+            "integral": [],
+            "funcional": [],
+            "temporada_noviembre": []
+        },
+        "medellin": {
+            "tradicional": [
+                {
+                    "nombre": "Pan de arroz",
+                    "imagen": "images/cascarita.jpg",
+                    "descripcion": "Pan suave elaborado con harina de arroz.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan aliñado",
+                    "imagen": "images/pan_alinado.jpg",
+                    "descripcion": "Pan tradicional con especias y hierbas.",
+                    "variantes": {
+                        "unidad": 2200
+                    }
+                },
+                {
+                    "nombre": "Pan de queso",
+                    "imagen": "images/pan_queso.jpg",
+                    "descripcion": "Pan esponjoso con trozos de queso fundido.",
+                    "variantes": {
+                        "unidad": 2500
+                    }
+                },
+                {
+                    "nombre": "Pan de yuca",
+                    "imagen": "images/pan_yuca.jpg",
+                    "descripcion": "Panecillo suave hecho con almidón de yuca.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de batata",
+                    "imagen": "images/pan_batata.jpg",
+                    "descripcion": "Pan dulce elaborado con batata natural.",
+                    "variantes": {
+                        "unidad": 2200
+                    }
+                }
+            ],
+            "dulce": [
+                {
+                    "nombre": "Pan de bocadillo",
+                    "imagen": "images/pan_bocadillo.jpg",
+                    "descripcion": "Pan dulce relleno de bocadillo veleño.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de manzana",
+                    "imagen": "images/pan_manzana.jpg",
+                    "descripcion": "Pan dulce con trozos de manzana y canela.",
+                    "variantes": {
+                        "unidad": 2200
+                    }
+                },
+                {
+                    "nombre": "Pan de vainilla",
+                    "imagen": "images/pan_vainilla.jpg",
+                    "descripcion": "Pan suave con esencia natural de vainilla.",
+                    "variantes": {
+                        "unidad": 1800
+                    }
+                },
+                {
+                    "nombre": "Pan de naranja",
+                    "imagen": "images/pan_naranja.jpg",
+                    "descripcion": "Pan dulce con ralladura y jugo de naranja.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                },
+                {
+                    "nombre": "Pan de miel",
+                    "imagen": "images/pan_miel.jpg",
+                    "descripcion": "Pan dulce endulzado con miel natural.",
+                    "variantes": {
+                        "unidad": 2200
+                    }
+                }
+            ],
+            "rellenos": [],
+            "integral": [],
+            "funcional": [],
+            "temporada_noviembre": []
+        }
+    },
+    "bizcocheria": {
+        "centro": {
+            "torta_artesanal": [
+                {
+                    "nombre": "Torta de zanahoria",
+                    "imagen": "images/torta_zanahoria.jpg",
+                    "descripcion": "Torta húmeda de zanahoria con cobertura de queso crema.",
+                    "variantes": {
+                        "porción": 3500,
+                        "entera": 25000
+                    }
+                },
+                {
+                    "nombre": "Torta tres leches",
+                    "imagen": "images/torta_tres_leches.jpg",
+                    "descripcion": "Bizcocho suave bañado en tres tipos de leche.",
+                    "variantes": {
+                        "porción": 4000,
+                        "entera": 30000
+                    }
+                }
+            ],
+            "dulces": [
+                {
+                    "nombre": "Galleta de avena",
+                    "imagen": "images/galleta_avena.jpg",
+                    "descripcion": "Galleta crujiente con avena y pasas.",
+                    "variantes": {
+                        "unidad": 1200
+                    }
+                },
+                {
+                    "nombre": "Brownie de chocolate",
+                    "imagen": "images/brownie.jpg",
+                    "descripcion": "Brownie húmedo con nueces.",
+                    "variantes": {
+                        "unidad": 2500
+                    }
+                }
+            ],
+            "salados": [
+                {
+                    "nombre": "Palito de queso",
+                    "imagen": "images/palito_queso.jpg",
+                    "descripcion": "Palito de pan relleno de queso fundido.",
+                    "variantes": {
+                        "unidad": 1800
+                    }
+                }
+            ]
+        },
+        "medellin": {
+            "torta_artesanal": [
+                {
+                    "nombre": "Torta de chocolate",
+                    "imagen": "images/torta_chocolate.jpg",
+                    "descripcion": "Torta esponjosa de chocolate con cobertura de ganache.",
+                    "variantes": {
+                        "porción": 4000,
+                        "entera": 32000
+                    }
+                }
+            ],
+            "dulces": [
+                {
+                    "nombre": "Alfajor",
+                    "imagen": "images/alfajor.jpg",
+                    "descripcion": "Dulce tradicional relleno de arequipe y cubierto de coco.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                }
+            ],
+            "salados": [
+                {
+                    "nombre": "Empanada de pollo",
+                    "imagen": "images/empanada_pollo.jpg",
+                    "descripcion": "Empanada horneada rellena de pollo y verduras.",
+                    "variantes": {
+                        "unidad": 2200
+                    }
+                }
+            ]
+        }
+    },
+    "cafeteria": {
+        "centro": {
+            "onces": [
+                {
+                    "nombre": "Sandwich mixto",
+                    "imagen": "images/sandwich_mixto.jpg",
+                    "descripcion": "Sandwich de jamón y queso en pan artesanal.",
+                    "variantes": {
+                        "unidad": 3500
+                    }
+                }
+            ],
+            "bebidas": [
+                {
+                    "nombre": "Café americano",
+                    "imagen": "images/cafe_americano.jpg",
+                    "descripcion": "Café filtrado suave.",
+                    "variantes": {
+                        "taza": 2000
+                    }
+                },
+                {
+                    "nombre": "Chocolate caliente",
+                    "imagen": "images/chocolate_caliente.jpg",
+                    "descripcion": "Bebida caliente de chocolate tradicional.",
+                    "variantes": {
+                        "taza": 2500
+                    }
+                }
+            ]
+        },
+        "medellin": {
+            "onces": [
+                {
+                    "nombre": "Croissant de jamón",
+                    "imagen": "images/croissant_jamon.jpg",
+                    "descripcion": "Croissant relleno de jamón y queso.",
+                    "variantes": {
+                        "unidad": 3200
+                    }
+                }
+            ],
+            "bebidas": [
+                {
+                    "nombre": "Tinto",
+                    "imagen": "images/tinto.jpg",
+                    "descripcion": "Café negro tradicional.",
+                    "variantes": {
+                        "taza": 1500
+                    }
+                }
+            ]
+        }
+    },
+    "santandereano": {
+        "centro": {
+            "tamal": [
+                {
+                    "nombre": "Tamal santandereano",
+                    "imagen": "images/tamal_santandereano.jpg",
+                    "descripcion": "Tamal tradicional con carne, pollo y verduras.",
+                    "variantes": {
+                        "unidad": 6000
+                    }
+                }
+            ],
+            "carnes_frias": [
+                {
+                    "nombre": "Chorizo santandereano",
+                    "imagen": "images/chorizo.jpg",
+                    "descripcion": "Chorizo artesanal típico de la región.",
+                    "variantes": {
+                        "unidad": 2500
+                    }
+                }
+            ],
+            "ayacos": [
+                {
+                    "nombre": "Ayaco de maíz",
+                    "imagen": "images/ayaco.jpg",
+                    "descripcion": "Preparación tradicional de maíz rellena de carne.",
+                    "variantes": {
+                        "unidad": 3500
+                    }
+                }
+            ]
+        },
+        "medellin": {
+            "tamal": [
+                {
+                    "nombre": "Tamal antioqueño",
+                    "imagen": "images/tamal_antioqueno.jpg",
+                    "descripcion": "Tamal típico de Antioquia con cerdo y verduras.",
+                    "variantes": {
+                        "unidad": 6500
+                    }
+                }
+            ],
+            "carnes_frias": [
+                {
+                    "nombre": "Butifarra",
+                    "imagen": "images/butifarra.jpg",
+                    "descripcion": "Embutido tradicional servido en rodajas.",
+                    "variantes": {
+                        "unidad": 2000
+                    }
+                }
+            ],
+            "ayacos": [
+                {
+                    "nombre": "Ayaco paisa",
+                    "imagen": "images/ayaco_paisa.jpg",
+                    "descripcion": "Ayaco relleno de carne y verduras.",
+                    "variantes": {
+                        "unidad": 3700
+                    }
+                }
+            ]
+        }
+    },
+    "restaurante": {
+        "centro": {
+            "combos": [
+                {
+                    "nombre": "Combo ejecutivo",
+                    "imagen": "images/combo_ejecutivo.jpg",
+                    "descripcion": "Incluye sopa, plato fuerte, jugo y postre.",
+                    "variantes": {
+                        "individual": 12000
+                    }
+                }
+            ],
+            "menu_del_dia": [
+                {
+                    "nombre": "Pollo a la plancha",
+                    "imagen": "images/pollo_plancha.jpg",
+                    "descripcion": "Pechuga de pollo a la plancha con guarnición.",
+                    "variantes": {
+                        "plato": 10000
+                    }
+                }
+            ],
+            "ensaladas": [
+                {
+                    "nombre": "Ensalada fresca",
+                    "imagen": "images/ensalada_fresca.jpg",
+                    "descripcion": "Mezcla de lechugas, tomate, zanahoria y aderezo.",
+                    "variantes": {
+                        "porción": 5000
+                    }
+                }
+            ]
+        },
+        "medellin": {
+            "combos": [
+                {
+                    "nombre": "Combo paisa",
+                    "imagen": "images/combo_paisa.jpg",
+                    "descripcion": "Bandeja paisa con bebida y postre.",
+                    "variantes": {
+                        "individual": 15000
+                    }
+                }
+            ],
+            "menu_del_dia": [
+                {
+                    "nombre": "Carne asada",
+                    "imagen": "images/carne_asada.jpg",
+                    "descripcion": "Carne asada con arroz, ensalada y patacón.",
+                    "variantes": {
+                        "plato": 11000
+                    }
+                }
+            ],
+            "ensaladas": [
+                {
+                    "nombre": "Ensalada tropical",
+                    "imagen": "images/ensalada_tropical.jpg",
+                    "descripcion": "Ensalada de frutas frescas y vegetales.",
+                    "variantes": {
+                        "porción": 5500
+                    }
+                }
+            ]
+        }
+    }
+}

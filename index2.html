@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el Maná - Tradición de hogar</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styleSedes.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="el Maná">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="#productos">Catalogo</a></li>
+                    <li><a href="#">Nuestras Sedes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="cart-icon">
+                    <img src="images/cart.png" alt="">
+                </a>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    | <main>
+        <!-- Hero Section -->
+        <section id="top" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Tradición<br>de Hogar</h1>
+                    <p>Descubre nuestro catálogo de productos.</p>
+
+                    <div class="delivery-info">
+                        <div class="info-card">
+                            <div class="icon-hero">
+                                <img src="images/car.png" alt="">
+                            </div>
+                            <div class="info-text">
+                                <h4>Pide a <strong>Domicilio</strong></h4>
+                                <p>Si lo haces hoy antes de las 4:00 p.m recibirás tu pedido al día siguiente.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="icon-hero">
+                                <img src="images/calendario.png" alt="">
+                            </div>
+                            <div class="info-text">
+                                <p>Los pedidos que hagas </p>
+                                <h4>sábados, domingos o festivos</h4>
+                                <p>serán entregados al día hábil siguiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot active"></span>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos" class="products">
+            <div class="container">
+                <!-- <div class="icon-row">
+                    <div class="icon-circle large">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="icon-circle large">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <div class="icon-circle large">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                </div>
+                 -->
+                <div class="icon-row">
+
+                    <div class="icon-circle large" data-section="panaderia-section">
+                        <img src="icons/panaderia.png" alt="Panadería">
+                    </div>
+                    <div class="icon-circle large" data-section="restaurante-section">
+                        <img src="icons/restaurante.png" alt="Restaurante">
+                    </div>
+                    <div class="icon-circle large" data-section="cafeteria-section">
+                        <img src="icons/cafeteria.png" alt="Cafetería">
+                    </div>
+                    <div class="icon-circle large" data-section="bizcocheria-section">
+                        <img src="icons/cafeteria.png" alt="Cafetería">
+                    </div>
+                    <div class="icon-circle large" data-section="rincon-santandereano-section">
+                        <img src="icons/cafeteria.png" alt="Cafetería">
+                    </div>
+                </div>
+
+                <div class="panaderia-section">
+                    <h2>Panadería</h2>
+                    <div class="section-divider"></div>
+                    <div class="product-grid">
+                        <div class="product-card catalog-card" data-category="tradicional">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Tradicional</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes
+                                clásicos de la casa, perfectos para cualquier ocasión.</p>
+                        </div>
+                        <div class="product-card catalog-card" data-category="dulce">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Dulce</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">
+                                Variedad de panes y pasteles dulces para disfrutar.
+                            </p>
+                        </div>
+                        <div class="product-card catalog-card" data-category="rellenos">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Rellenos</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes con
+                                deliciosos rellenos, ideales para sorprender.</p>
+                        </div>
+                        <div class="product-card catalog-card" data-category="integral">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Integral</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Opciones
+                                saludables y nutritivas, hechas con harinas integrales.</p>
+                        </div>
+                        <div class="product-card catalog-card" data-category="funcional">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Funcional</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Panes
+                                especiales con ingredientes funcionales para tu bienestar.</p>
+                        </div>
+                        <div class="product-card catalog-card" data-category="temporada" style="display: none;">
+                            <div class="product-image">
+                                <img src="images/cascarita.jpg" alt="Tradicional">
+                            </div>
+                            <h3>Temporada (Noviembre)</h3>
+                            <p style="border-left: 3px solid #d4af37; padding-left: 10px; margin-left: 10%;">Productos
+                                exclusivos de temporada, disponibles en noviembre.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bizcocheria-section" style="display: none;">
+                    <h2>Bizcochería</h2>
+                    <div class="section-divider"></div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/bizcocho-polvorosa.jpg" alt="Polvorosa">
+                            </div>
+                            <h3>Polvorosa</h3>
+                            <p>Bizcocho tradicional, crujiente y delicioso.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/bizcocho-roscon.jpg" alt="Roscón">
+                            </div>
+                            <h3>Roscón</h3>
+                            <p>Bizcocho relleno de bocadillo o arequipe.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/bizcocho-galleta.jpg" alt="Galleta">
+                            </div>
+                            <h3>Galleta</h3>
+                            <p>Galletas artesanales de mantequilla.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cafeteria-section" style="display: none;">
+                    <h2>Cafetería</h2>
+                    <div class="section-divider"></div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/cafe-tinto.jpg" alt="Café Tinto">
+                            </div>
+                            <h3>Café Tinto</h3>
+                            <p>Café colombiano recién preparado.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/cafe-capuchino.jpg" alt="Capuchino">
+                            </div>
+                            <h3>Capuchino</h3>
+                            <p>Espuma de leche y café, una combinación perfecta.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/cafe-chocolate.jpg" alt="Chocolate">
+                            </div>
+                            <h3>Chocolate</h3>
+                            <p>Bebida caliente de chocolate artesanal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rincon-santandereano-section" style="display: none;">
+                    <h2>Rincón Santandereano</h2>
+                    <div class="section-divider"></div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/hormiga-culona.jpg" alt="Hormiga Culona">
+                            </div>
+                            <h3>Hormiga Culona</h3>
+                            <p>Delicadeza típica de Santander.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/arepa-santandereana.jpg" alt="Arepa Santandereana">
+                            </div>
+                            <h3>Arepa Santandereana</h3>
+                            <p>Arepa crocante y sabrosa, receta tradicional.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/pepitoria.jpg" alt="Pepitoria">
+                            </div>
+                            <h3>Pepitoria</h3>
+                            <p>Plato típico santandereano, lleno de sabor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="restaurante-section" style="display: none;">
+                    <h2>Restaurante</h2>
+                    <div class="section-divider"></div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/bandeja-paisa.jpg" alt="Bandeja Paisa">
+                            </div>
+                            <h3>Bandeja Paisa</h3>
+                            <p>Plato tradicional colombiano con variedad de ingredientes.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/ajiaco.jpg" alt="Ajiaco">
+                            </div>
+                            <h3>Ajiaco</h3>
+                            <p>Sopa típica de Bogotá, con pollo y papa.</p>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/sancocho.jpg" alt="Sancocho">
+                            </div>
+                            <h3>Sancocho</h3>
+                            <p>Caldo tradicional con carnes y verduras.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
+        <!-- Nuestras Sedes Section -->
+<section class="sedes-section">
+        <div class="section-title">
+            <h2>Nuestras Sedes</h2>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+          
+                   <!-- Sede 7 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede7.jpg" alt="Cafe y Pan CIE" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cafe y Pan CIE</h3>
+                        <p>CIE LOCAL 219</p>
+                        <p>Cel: 3165000009</p>
+                        <div class="description">
+                            Un espacio único en el CIE, especializado en café y panadería artesanal para disfrutar en cualquier momento.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 1 -->
+                <div class="sede-card center" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede1.jpg" alt="Centro" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Centro</h3>
+                        <p>CR 16 # 37 - 42 CENTRO</p>
+                        <p>Tel: 6076425198</p>
+                        <p>Cel: 3173487430</p>
+                        <div class="description">
+                            Nuestra sede principal en el centro de Bucaramanga, con atención cálida y variedad de productos frescos todos los días.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 2 -->
+                <div class="sede-card slide" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede2.jpg" alt="Antonia Santos" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Antonia Santos</h3>
+                        <p>CR 21 # 32 - 46 ANTONIA SANTOS</p>
+                        <p>Cel: 3176192258</p>
+                        <div class="description">
+                            Ubicada en el tradicional barrio Antonia Santos, ideal para disfrutar en familia y con amigos en un ambiente acogedor.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 3 -->
+                <div class="sede-card side" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede3.jpg" alt="Paseo del Comercio" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Paseo del Comercio</h3>
+                        <p>CL 35 # 13 -17 CENTRO</p>
+                        <p>Cel: 3155125588</p>
+                        <div class="description">
+                            En el corazón comercial de la ciudad, perfecta para una pausa deliciosa durante tus compras o actividades diarias.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 4 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede4.jpg" alt="Cabecera" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cabecera</h3>
+                        <p>CR 35 A # 52 - 32</p>
+                        <p>Cel: 3158070804</p>
+                        <div class="description">
+                            Sede ubicada en Cabecera, con ambiente moderno y excelente atención para compartir momentos especiales.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 5 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede5.jpg" alt="Mejoras Públicas" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Mejoras Públicas</h3>
+                        <p>CR 28 # 35 - 90</p>
+                        <p>Tel: 6076822282</p>
+                        <p>Cel: 3153962533</p>
+                        <div class="description">
+                            Ideal para llevar a casa el pan más delicioso y fresco, perfecto para compartir en familia o sorprender a tus seres queridos con un sabor inolvidable.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 6 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede6.jpg" alt="Cañaveral" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cañaveral</h3>
+                        <p>CL 31 # 24 - 41 FLORIDABLANCA</p>
+                        <p>Cel: 3043161907</p>
+                        <div class="description">
+                            En Floridablanca, nuestra sede Cañaveral ofrece productos frescos y atención personalizada en una zona estratégica.
+                        </div>
+                    </div>
+                </div>
+                <!-- Sede 7 -->
+                <div class="sede-card side" style="display:none;height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede7.jpg" alt="Cafe y Pan CIE" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Cafe y Pan CIE</h3>
+                        <p>CIE LOCAL 219</p>
+                        <p>Cel: 3165000009</p>
+                        <div class="description">
+                            Un espacio único en el CIE, especializado en café y panadería para disfrutar en cualquier momento.
+                        </div>
+                    </div>
+                </div>
+           <!-- Sede 1 -->
+                <div class="sede-card center" style="height:100%;min-height:320px;max-height:420px;">
+                    <div class="sede-image">
+                        <img src="images/sedes/sede1.jpg" alt="Centro" class="sede-img">
+                    </div>
+                    <div class="sede-info">
+                        <h3>Centro</h3>
+                        <p>CR 16 # 37 - 42 CENTRO</p>
+                        <p>Tel: 6076425198</p>
+                        <p>Cel: 3173487430</p>
+                        <div class="description">
+                            Nuestra sede principal en el centro de Bucaramanga, con atención cálida y variedad de productos frescos todos los días.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button prev" id="prevBtn">‹</button>
+            <button class="nav-button next" id="nextBtn">›</button>
+        </div>
+
+        <div class="indicators" id="indicators">
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+            <span class="indicator" data-slide="5"></span>
+            <span class="indicator" data-slide="6"></span>
+             <span class="indicator" data-slide="7"></span>
+            <span class="indicator" data-slide="8"></span>
+        </div>
+    </section>
+        <script>
+            (function () {
+                // Carousel logic for showing 3, 2, or 1 cards depending on screen size
+                const track = document.querySelector('.carousel-track');
+                const cards = Array.from(track.children);
+                const prevBtn = document.querySelector('.carousel-btn.prev');
+                const nextBtn = document.querySelector('.carousel-btn.next');
+                const dotsContainer = document.querySelector('.carousel-dots');
+
+                let cardsPerView = 3;
+                let currentIndex = 0;
+
+                function updateCardsPerView() {
+                    if (window.innerWidth <= 600) {
+                        cardsPerView = 1;
+                    } else if (window.innerWidth <= 900) {
+                        cardsPerView = 2;
+                    } else {
+                        cardsPerView = 3;
+                    }
+                }
+
+                function updateCarousel() {
+                    updateCardsPerView();
+                    // Hide all cards
+                    cards.forEach(card => card.style.display = 'none');
+                    // Show only the visible cards
+                    for (let i = 0; i < cardsPerView; i++) {
+                        let idx = (currentIndex + i) % cards.length;
+                        cards[idx].style.display = 'flex';
+                    }
+                    // Update dots
+                    updateDots();
+                }
+
+                function updateDots() {
+                    dotsContainer.innerHTML = '';
+                    const numDots = Math.ceil(cards.length / cardsPerView);
+                    for (let i = 0; i < numDots; i++) {
+                        const dot = document.createElement('span');
+                        dot.className = 'dot' + (i === Math.floor(currentIndex / cardsPerView) ? ' active' : '');
+                        dot.addEventListener('click', () => {
+                            currentIndex = i * cardsPerView;
+                            if (currentIndex >= cards.length) currentIndex = 0;
+                            updateCarousel();
+                        });
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    updateCardsPerView();
+                    currentIndex -= cardsPerView;
+                    if (currentIndex < 0) currentIndex = cards.length - cardsPerView;
+                    if (currentIndex < 0) currentIndex = 0;
+                    updateCarousel();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    updateCardsPerView();
+                    currentIndex += cardsPerView;
+                    if (currentIndex >= cards.length) currentIndex = 0;
+                    updateCarousel();
+                });
+
+                window.addEventListener('resize', () => {
+                    updateCardsPerView();
+                    currentIndex = 0;
+                    updateCarousel();
+                });
+
+                // Init
+                updateCarousel();
+            })();
+        </script>
+    </main>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://linktr.ee/ElManaOficial?fbclid=PAAaYGcB9BXAG-o2A7sk7Bzy0i8lmEot04W-sW1xim2Chz1PFOjGgPX7kmhqw"
+        class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <img src="icons/whatsapp.png" alt="WhatsApp" style="height:5rem;">
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logoOscuro.png" alt="el Maná">
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <p>Cra. 18 #37-42, Bucaramanga - Colombia</p>
+                <p>Teléfono: 6076425198</p>
+                <p>Email: contacto@elmana.co</p>
+            </div>
+
+            <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                    dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+                    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+                    delenit augue duis dolore te feugiat nulla facilisi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                    ullamcorper suscipit</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+
+
+
+    </script>
+    <script src="script.js"></script>
+    <script>"scriptSedes.js"</script>
+</body>
+
+</html>
